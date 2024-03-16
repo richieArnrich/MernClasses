@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+      .div1 {
+        background-color: rgb(247, 200, 207);
+      }
+      #heading {
+        text-align: center;
+        color: darkblue;
+        text-decoration: underline;
+        text-decoration-style: wavy;
+      }
+      #para1 {
+        text-align: justify;
+        line-height: 25px;
+        padding: 0 2rem 0 2rem;
+      }
+      #para2 {
+        padding: auto;
+        width: auto;
+      }
+      #img1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 2rem;
+      }
+      .flexbox {
+        /* background-color: violet; */
+        display: flex;
+      }
+      #item {
+        margin: 2rem;
+        /* background-color: violet; */
+        /* padding: 2rem; */
+      }
+      @media screen and (max-width: 680px) {
+        .flexbox {
+          display: block;
+        }
+      }
+      .container {
+        position: relative;
+        width: 100%; /* Adjust as needed */
+        height: 300px; /* Adjust as needed */
+        border: 1px solid black; /* Just for visualization */
+        background-color: aliceblue;
+        overflow: hidden;
+      }
+
+      .ball {
+        position: absolute;
+        width: 100px; /* Adjust as needed */
+        height: 100px; /* Adjust as needed */
+        background-color: blue; /* Adjust as needed */
+        border-radius: 50%; /*to make it round*/
+        animation: bounce 2s linear infinite, moveForward 4s linear infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          background-color: yellow;
+          bottom: 0;
+          transform: rotate(45deg);
+        }
+        50% {
+          background-color: orange;
+          bottom: 200px; /* Adjust as needed */
+          transform: rotate(-45deg);
+        }
+      }
+
+      @keyframes moveForward {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: calc(100% - 50px); /* Adjust as needed */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <h1 id="heading">Welcome to my webpage</h1>
+      <p id="para1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. In sed vel
+        earum asperiores ullam aperiam, modi aliquid, repellat dolorum unde
+        totam, nisi fugiat incidunt. Veritatis expedita reiciendis aperiam
+        eveniet! Dignissimos?Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. In sed vel earum asperiores ullam aperiam, modi aliquid, repellat
+        dolorum unde totam, nisi fugiat incidunt. Veritatis expedita reiciendis
+        aperiam eveniet! Dignissimos?Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. In sed vel earum asperiores ullam aperiam, modi
+        aliquid, repellat dolorum unde totam, nisi fugiat incidunt. Veritatis
+        expedita reiciendis aperiam eveniet! Dignissimos?
+      </p>
+      <img src="./samsung.png" id="img1" />
+      <div class="flexbox">
+        <div id="item">
+          <p id="para2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Perferendis vitae inventore cum iusto quis officiis voluptatum est
+            veniam voluptatibus sapiente, laudantium tempora ipsam, natus, fugit
+            ipsum possimus qui cumque? Reprehenderit!Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Perferendis vitae inventore cum iusto
+            quis officiis voluptatum est veniam voluptatibus sapiente,
+            laudantium tempora ipsam, natus, fugit ipsum possimus qui cumque?
+            Reprehenderit!
+          </p>
+        </div>
+        <div id="item">
+          <img src="./samsung.png" id="img1" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="ball"></div>
+      </div>
+    </div>
+  </body>
+</html>
